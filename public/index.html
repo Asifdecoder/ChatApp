@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery.js"></script>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Chat app</title>
+    <script src="socket.io/socket.io.js"></script>
+    <style>
+      *{
+          list-style: none;
+      }
+      li{
+          border mb-2 p-2 rounded
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="font-weight: 600;" class="display-6 text-center mt-4">Chat with friends</h1>
+    <section id="login" class="border mx-auto w-50">
+
+        <div class="d-grid  w-40">
+            <input class="form-control " id="username" placeholder="Enter your name" type="text">
+            <button id="login-btn" class="btn btn btn-danger">Login</button>
+        </div>
+
+    </section>
+
+    <section
+      class="border mx-auto overflow-auto ps-8 p-2"
+      style="width: 380px; height: 300px";
+      id="chat-box"
+    >
+      <ul id="chat">
+        <!-- <li class="borer mb-2 p-2 rounded-pill">
+          <span class="fw-bold">Asif: </span>How are you
+        </li> -->
+      </ul>
+      <textarea
+        id="input"
+        class="form-control"
+        id=""
+        cols="30"
+        rows="4"
+        placeholder="Enter your message"
+      ></textarea>
+      <button id="send-btn" class="btn btn-md btn-dark m-2">Send</button>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
